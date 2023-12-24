@@ -17,3 +17,6 @@ const closeNavHandler = () => {
 
 navOpenBtn.addEventListener('click', openNavHandler)
 navCloseBtn.addEventListener('click', closeNavHandler)
+
+
+

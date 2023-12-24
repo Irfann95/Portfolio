@@ -128,13 +128,13 @@ section:nth-child(odd) {
 nav {
     background-color: var(--color-nav-bg);
     border-bottom: 1px solid var(--color-gray-300);
-    display: grid;
-    height: 3.8rem;
+    display: flex;
+    height: 6rem;
     flex-direction: row;
     position:fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     -moz-backdrop-filter: blur(15px);
@@ -143,34 +143,31 @@ nav {
 }
 
 .nav__container {
+    width: 95%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    /* border:solid blue; */
 }
 
 
 .nav__logo {
-    margin-top: 15px;
-    width: 2.4rem;
+    padding: 1.3rem 0rem;
+    width: 4rem;
     aspect-ratio: 1/1;
     overflow: hidden;
-    
 }
-.nav__logo a img {
-    width: 100%;
-    height: 100%;
-}
+
 
 
 .nav__menu {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 3rem;
 }
 
 .nav__menu li {
-    margin: 5px;
+    text-align: center;
     opacity: 0; 
     animation: navKey 500ms ease-in-out forwards;
     transform-origin: top ;
@@ -185,7 +182,7 @@ nav {
 }
 
 .nav__menu li a {
-    padding: 1rem 4rem;
+    padding: 1rem 0rem;
     text-align: center;
 } 
 
@@ -203,7 +200,8 @@ nav {
 }
 
 .nav__buttons {
-    margin-top: 1.75%;
+    /* border: solid black; */
+    margin: 37px 0px;
 }
 .nav__menu a {
     color: var(--color-gray-900);
@@ -264,9 +262,23 @@ header {
     margin-bottom: 0.7rem;
 }
 
+.header__content p {
+    color: var(--color-gray-800);
+}
+
 .header__content h2 span {
+    position: relative;
+}
+
+
+
+.typing {
     color: #0519b3;
 }
+
+
+
+
 
 
 .header__content p {
@@ -570,7 +582,7 @@ footer {
     color: var(--color-gray-100);
 }
 
-@media (max-width:768px) { 
+@media (max-width:840px) { 
     h1 {
         font-size: 1.8rem;
     }
@@ -588,7 +600,7 @@ footer {
 
 
     .nav__buttons {
-        margin-top: 20px;
+        margin:25px 0px;
     }
 
     section > h1, section > p {
