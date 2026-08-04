@@ -447,6 +447,7 @@ header {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    align-items: stretch;
     gap: 3.5rem;  
     width: auto;
     margin: 25px;
@@ -462,6 +463,8 @@ header {
     padding: 1.4rem;
     border-radius: var(--radius-2);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .project:hover {
@@ -473,24 +476,54 @@ header {
     padding: 0;
     height: auto;
     max-height: 12rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     border-radius: var(--radius-4);
     overflow: hidden;
     
 }
 
+.project__image img {
+    width: 100%;
+    display: block;
+}
+
+.project__desc {
+    text-align: left;
+    color: var(--color-gray-600);
+    margin-top: 0.6rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.project__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.project__stack span {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 1rem;
+    background: var(--color-gray-200);
+    color: var(--color-gray-700);
+}
+
 .project__cta {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: auto;
+    padding-top: 1rem;
     justify-content: center;
 }
 
 
 .projects__container article {
-    width: 18rem;
-    height: 18rem;
+    width: 20rem;
+    height: auto;
 }
 
 .projects h1 {

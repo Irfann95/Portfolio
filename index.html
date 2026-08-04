@@ -40,8 +40,9 @@
             </article>
             <article class="header__content">
                 <h2>Salut, je suis <span class="typing"></span></h2>
-                <p>Actuellement étudiant chez Epitech, j'ai pour objectif de continuer à me former et à élargir mes 
-                    compétences dans le domaine de l'informatique
+                <p>Alternant ingénieur logiciel en dernière année de MSc Pro à Epitech Technology, je me spécialise 
+                    aujourd'hui en data engineering (Spark, ClickHouse, FastAPI) après plusieurs années en full-stack. 
+                    Je recherche un CDI à partir d'octobre 2026.
                 </p>
                 <div class="header___cta">
                     <a href="#contactme" class="btn primary">Contactez-moi</a>
@@ -64,11 +65,14 @@
             </div>
             <div class="about__details">
                 <h1>A propos de moi</h1>
-                <p>Salut ! Je m'appelle Irfann ASSSANA, j'ai 22 ans et je vis actuellement à Montigny-lès-Cormeilles dans le Val-d'Oise. Actuellement étudiant en Pré-MsC (Bac+3) au sein 
-                    de l'école de l'expertise informatique Epitech.</p> 
-                <p>J'ai découvert le monde de l'informatique via mon entourage et ma famille (mon père et mon oncle travaillant également dans 
-                    l'informatique). Mon objectif professionnel est de contribuer au monde de la cybersécurité. Face aux risques croissants dans notre univers de plus en plus numérisé, je 
-                    m'efforce de devenir un acteur majeur dans la protection des données et des systèmes informatiques.</p>
+                <p>Salut ! Je m'appelle Irfann ASSANA, basé en Île-de-France. Je suis actuellement en dernière année de 
+                    MSc Pro (Bac+5) à Epitech Technology, en alternance chez DATA à Cachan, avec une graduation prévue 
+                    autour de septembre/octobre 2026.</p> 
+                <p>Mon parcours est full-stack (C#/.NET, Node.js, PHP, Vue.js), mais je me spécialise aujourd'hui en 
+                    data engineering : pipelines Spark, architecture en médaillon Bronze/Silver/Gold, bases analytiques 
+                    comme ClickHouse, APIs FastAPI et streaming Kafka. Mes projets récents (Homepedia, Crypto Viz) 
+                    servent de preuve concrète de cette montée en compétence. Je recherche un CDI à partir d'octobre 
+                    2026, sur des postes hybrides logiciel/data ou des postes de data engineer.</p>
                 <div class="cv">
                 <a href="./assets/CV_Irfann_ASSANA.pdf" class="btn primary" download target="_blank"><i class="uil uil-download-alt"></i> Télécharger mon CV</a> 
                 </div>   
@@ -136,7 +140,52 @@
             </div>  
             <div class="skills__blob">
                 <img src="assets/Logo/java-4.svg" alt="bueauimage">
-            </div>            
+            </div>
+            <div class="skills__blob">
+                <img src="assets/Logo/typescript.svg" alt="TypeScript">
+            </div>
+            <div class="skills__blob">
+                <img src="assets/Logo/dotnet.svg" alt="C# / .NET">
+            </div>
+            <div class="skills__blob">
+                <img src="assets/Logo/vuejs.svg" alt="Vue.js">
+            </div>
+            <div class="skills__blob">
+                <img src="assets/Logo/nestjs.svg" alt="NestJS">
+            </div>
+            <div class="skills__blob">
+                <img src="assets/Logo/nextjs.svg" alt="Next.js">
+            </div>
+        </div>
+    </div>
+
+    <h2 class="skills__title1">
+        Data Engineering &amp; Big Data
+    </h2>
+
+    <div class="skills__info">
+        <div class="skills__data">
+            <div class="skills__blob">
+                <img src="assets/Logo/apachespark.svg" alt="Apache Spark / PySpark">
+            </div>
+            <div class="skills__blob">
+                <img src="assets/Logo/kafka.svg" alt="Apache Kafka">
+            </div>
+            <div class="skills__blob">
+                <img src="assets/Logo/clickhouse.svg" alt="ClickHouse">
+            </div>
+            <div class="skills__blob">
+                <img src="assets/Logo/postgresql.svg" alt="PostgreSQL">
+            </div>
+            <div class="skills__blob">
+                <img src="assets/Logo/fastapi.svg" alt="FastAPI">
+            </div>
+            <div class="skills__blob">
+                <img src="assets/Logo/streamlit.svg" alt="Streamlit">
+            </div>
+            <div class="skills__blob">
+                <img src="assets/Logo/docker.svg" alt="Docker">
+            </div>
         </div>
     </div>
 
@@ -201,29 +250,32 @@
     <div class="container projects__container">
         <article data-aos="fade-up" class="project">
             <div class="project__image">
-                <img src="./assets/Job-board.png" alt="Project Image One">
+                <img src="./assets/homepedia-banner.svg" alt="Homepedia">
             </div>
-            <h3> Site d'offre d'emplois</h3>
-            <div  class="project__cta">
-                <a href="https://github.com/Irfann95/Job-board" class="btn sm primary" target="_blank">GitHub</i></a>
-            </div> 
-        </article>
-        <article data-aos="fade-up" class="project">
-            <div class="project__image">
-                <img src="./assets/MicrosoftTeams-image.png" alt="Project Image One">
+            <h3>Homepedia</h3>
+            <p class="project__desc">Plateforme d'aide au logement étudiant : pipeline Spark en architecture 
+                médaillon (Bronze/Silver/Gold), scoring multicritère budget / transport / vie culturelle, 
+                servi via FastAPI et Streamlit.</p>
+            <div class="project__stack">
+                <span>PySpark</span><span>ClickHouse</span><span>FastAPI</span><span>Streamlit</span><span>Docker</span>
             </div>
-            <h3> Jeu de Tower Défense</h3>
             <div class="project__cta">
-                <a href="https://github.com/Irfann95/Tower_Defense_Game" class="btn sm primary" target="_blank">GitHub</i></a>
+                <a href="https://github.com/DATA-Project-HomePedia/T-DAT-902-PAR_7" class="btn sm primary" target="_blank">GitHub</a>
             </div> 
         </article>
         <article data-aos="fade-up" class="project">
             <div class="project__image">
-                <img src="./assets/treko.png" alt="Project Image One">
+                <img src="./assets/cryptoviz-banner.svg" alt="Crypto Viz">
             </div>
-            <h3>App mobile de gestion de projet</h3>
-            <div class="project__cta1">
-                <a href="https://github.com/Irfann95/Project_management_app" class="btn sm primary" target="_blank">GitHub</i></a>
+            <h3>Crypto Viz</h3>
+            <p class="project__desc">Plateforme d'analytics crypto temps réel : pipeline de streaming Kafka 
+                (extract / transform / load), API FastAPI, base PostgreSQL et dashboard Next.js avec 
+                indicateurs financiers (volatilité, Sharpe, drawdown, corrélation).</p>
+            <div class="project__stack">
+                <span>Kafka</span><span>FastAPI</span><span>PostgreSQL</span><span>Next.js</span><span>Docker</span>
+            </div>
+            <div class="project__cta">
+                <a href="https://gitlab.com/epitech-t-dat-901/t-dat-901-crypto-viz" class="btn sm primary" target="_blank">GitLab</a>
             </div> 
         </article>
         
@@ -257,7 +309,7 @@
         </ul>
     </div>
     <div class="footer__copyright">
-        <small>2023 Irfann ASSANA &copy; All Rights Reserved. </small>
+        <small>2026 Irfann ASSANA &copy; All Rights Reserved. </small>
     </div>
    </footer>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
