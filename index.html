@@ -1,59 +1,78 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'Irfann ASSANA, ingénieur full-stack et data engineer : applications web, API, pipelines de données (Python, Spark, Airflow, Kafka). Disponible immédiatement en CDI.">
     <link rel="icon" href="./assets/The_Backgroud.png" type="image/png">
-    <title>Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irfann ASSANA – Ingénieur Full-Stack &amp; Data Engineer</title>
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-       
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Styles minimaux pour les nouveaux blocs (tags, intro de section, liste de faits). -->
+    <style>
+        .section__intro { text-align: center; max-width: 46rem; margin: 0 auto 2rem; opacity: .85; }
+        .skills__tags { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin: 1rem 0 2.5rem; }
+        .skills__tag { padding: .35rem .8rem; border-radius: 999px; border: 1px solid rgba(127,127,127,.45); background: rgba(127,127,127,.12); font-size: .85rem; color: inherit; }
+        .projects > h1 + .section__intro { margin-top: -3.5rem; margin-bottom: 3rem; }
+        .skills__blob { position: relative; }
+        .skills__blob::after { content: attr(data-name); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(4px); background: var(--color-gray-900); color: var(--color-gray-100); font-size: .75rem; line-height: 1.3; padding: .3rem .6rem; border-radius: var(--radius-5); white-space: nowrap; opacity: 0; pointer-events: none; transition: var(--transition); z-index: 5; }
+        .skills__blob:hover::after, .skills__blob:focus-within::after { opacity: 1; transform: translateX(-50%); }
+        .skills__blob { position: relative; cursor: default; }
+        .skills__blob::after { content: attr(data-name); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(4px); background: #111; color: #fff; font-size: .75rem; padding: .25rem .6rem; border-radius: .4rem; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; z-index: 5; }
+        .skills__blob:hover::after, .skills__blob:focus::after { opacity: 1; transform: translateX(-50%) translateY(0); }
+        .about__facts { margin: 1rem 0 0; padding-left: 1.2rem; list-style: disc; }
+        .about__facts li { margin-bottom: .35rem; }
+    </style>
 </head>
 <body>
    <nav>
         <div class="container nav__container">
             <a href="index.html" class="nav__logo">
-                <img src="./assets/The_Backgroud.png" alt="NavBar Logo">
+                <img src="./assets/The_Backgroud.png" alt="Logo Irfann ASSANA">
             </a>
-        
+
         <ul class="nav__menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">A propos de moi</a></li>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos de moi</a></li>
             <li><a href="#skills">Compétences</a></li>
+            <li><a href="#experience">Expérience</a></li>
             <li><a href="#projects">Mes projets</a></li>
-            <li><a href="#contactme">Conctatez-moi</a></li>
+            <li><a href="#contactme">Contactez-moi</a></li>
         </ul>
         <div class="nav__buttons">
-            <button class="nav__toggle-open"><i class="uil uil-bars"></i></button>
-            <button class="nav__toggle-croix"><i class="uil uil-multiply"></i></button>
+            <button class="nav__toggle-open" aria-label="Ouvrir le menu"><i class="uil uil-bars"></i></button>
+            <button class="nav__toggle-croix" aria-label="Fermer le menu"><i class="uil uil-multiply"></i></button>
         </div>
     </div>
    </nav>
+
    <header data-aos="fade-up" class="home" id="home">
         <div class="container header__container">
             <article class="header__image" data-aos="fade-up" data-aos-delay="700">
-                <div><img src="./assets/photo.jpg" alt="Header Image"></div>
+                <div><img src="./assets/photo.jpg" alt="Photo d'Irfann ASSANA"></div>
             </article>
             <article class="header__content">
                 <h2>Salut, je suis <span class="typing"></span></h2>
-                <p>Alternant ingénieur logiciel en dernière année de MSc Pro à Epitech Technology, je me spécialise 
-                    aujourd'hui en data engineering (Spark, ClickHouse, FastAPI) après plusieurs années en full-stack. 
-                    Je recherche un CDI à partir d'octobre 2026.
+                <p>Ingénieur diplômé d’un MSc Pro en ingénierie logicielle, spécialité Big Data (Epitech).
+                    Je conçois des applications de bout en bout, API, interfaces et bases de données, ainsi que
+                    les pipelines de données qui les alimentent (Python, Spark, Airflow, Kafka).
+                    Disponible immédiatement en CDI.
                 </p>
                 <div class="header___cta">
                     <a href="#contactme" class="btn primary">Contactez-moi</a>
-                    <a href="#projects" class="btn">Portfolio</a>
-
+                    <a href="#projects" class="btn">Voir mes projets</a>
                 </div>
             </article>
             <ul class="header__socials">
-                <li><a href="https://twitter.com/as95_irfann" target="_blank"><i class="uil uil-twitter-alt"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/irfann-assana/" target="_blank"><i class="uil uil-linkedin-alt"></i></a></li>
-                <li><a href="https://github.com/Irfann95/Presentation" target="_blank"><i class="uil uil-github-alt"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/irfann-assana/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="uil uil-linkedin-alt"></i></a></li>
+                <li><a href="https://github.com/Irfann95" target="_blank" rel="noopener" aria-label="GitHub"><i class="uil uil-github-alt"></i></a></li>
+                <li><a href="mailto:irfannassana@gmail.com" aria-label="Envoyer un e-mail"><i class="uil uil-envelope"></i></a></li>
             </ul>
         </div>
    </header>
@@ -61,257 +80,196 @@
    <section data-aos="fade-up" data-aos-delay="200" class="about" id="about">
         <div class="container about__container">
             <div class="about__image">
-                <img src="./assets/indian.jpg" alt="About Image">
+                <img src="./assets/indian.jpg" alt="Irfann ASSANA">
             </div>
             <div class="about__details">
-                <h1>A propos de moi</h1>
-                <p>Salut ! Je m'appelle Irfann ASSANA, basé en Île-de-France. Je suis actuellement en dernière année de 
-                    MSc Pro (Bac+5) à Epitech Technology, en alternance chez DATA à Cachan, avec une graduation prévue 
-                    autour de septembre/octobre 2026.</p> 
-                <p>Mon parcours est full-stack (C#/.NET, Node.js, PHP, Vue.js), mais je me spécialise aujourd'hui en 
-                    data engineering : pipelines Spark, architecture en médaillon Bronze/Silver/Gold, bases analytiques 
-                    comme ClickHouse, APIs FastAPI et streaming Kafka. Mes projets récents (Homepedia, Crypto Viz) 
-                    servent de preuve concrète de cette montée en compétence. Je recherche un CDI à partir d'octobre 
-                    2026, sur des postes hybrides logiciel/data ou des postes de data engineer.</p>
+                <h1>À propos de moi</h1>
+                <p>Salut ! Je m’appelle Irfann ASSANA, basé en Île-de-France. Je suis diplômé d’un MSc Pro (Bac+5)
+                    en ingénierie logicielle, spécialité Big Data, à Epitech Technology, et je viens de terminer
+                    deux ans d’alternance chez DATA à Cachan.</p>
+                <p>J’ai un profil hybride : côté full-stack, j’ai travaillé en production sur du C#/.NET, Vue.js,
+                    Node.js et PHP, de la base de données à l’interface. Côté data, j’ai conçu des pipelines
+                    Python/Airflow en entreprise, puis des pipelines Spark en architecture médaillon
+                    (Bronze/Silver/Gold), du streaming Kafka et des APIs FastAPI sur mes projets de formation.
+                    Je recherche un CDI en développement full-stack avec une composante data, ou en data engineering.</p>
+                <ul class="about__facts">
+                    <li>MSc Pro Expert et Ingénierie Logicielle, spécialité Big Data : Epitech Technology (2023 – 2026)</li>
+                    <li>Certification DataCamp Associate Data Engineer in SQL (2026)</li>
+                    <li>Certification Databricks Data Engineer Associate : en cours</li>
+                </ul>
                 <div class="cv">
-                <a href="./assets/CV_Irfann_ASSANA.pdf" class="btn primary" download target="_blank"><i class="uil uil-download-alt"></i> Télécharger mon CV</a> 
-                </div>   
+                <a href="./assets/CV_Irfann_ASSANA.pdf" class="btn primary" download target="_blank"><i class="uil uil-download-alt"></i> Télécharger mon CV</a>
+                </div>
             </div>
         </div>
    </section>
-   
+
    <section data-aos="fade-up" data-aos-delay="200" class="skills" id="skills">
     <h1 class="skills_title">Mes compétences</h1>
     <div class="app___skills-container">
         <div class="skills__content">
-        <h2 class="skills__title1">
-                Systèmes d'exploitations
-        </h2>
 
+        <h2 class="skills__title1">Développement full-stack</h2>
         <div class="skills__info">
             <div class="skills__data">
-                <div class="skills__blob">
-                    <img src="assets/Logo/microsoft-windows-22.svg" alt="bueauimage">
-                </div>
-                <div class="skills__blob">
-                    <img src="assets/Logo/mac-os-2.svg" alt="bueauimage">
-                </div>
-                <div class="skills__blob">
-                    <img src="assets/Logo/linux-tux-1.svg" alt="bueauimage">
-                </div>
-                
+                <div class="skills__blob" tabindex="0" data-name="HTML5"><img src="assets/Logo/html-1.svg" alt="HTML5" title="HTML5"></div>
+                <div class="skills__blob" tabindex="0" data-name="CSS3"><img src="assets/Logo/css-3.svg" alt="CSS3" title="CSS3"></div>
+                <div class="skills__blob" tabindex="0" data-name="JavaScript"><img src="assets/Logo/logo-javascript.svg" alt="JavaScript" title="JavaScript"></div>
+                <div class="skills__blob" tabindex="0" data-name="C# / .NET"><img src="assets/Logo/dotnet.svg" alt="C# / .NET" title="C# / .NET"></div>
+                <div class="skills__blob" tabindex="0" data-name="Node.js"><img src="assets/Logo/nodejs-icon.svg" alt="Node.js" title="Node.js"></div>
+                <div class="skills__blob" tabindex="0" data-name="Vue.js"><img src="assets/Logo/vuejs.svg" alt="Vue.js" title="Vue.js"></div>
+                <div class="skills__blob" tabindex="0" data-name="PHP"><img src="assets/Logo/php-1.svg" alt="PHP" title="PHP"></div>
             </div>
         </div>
-        <h2 class="skills__title1">
-            Langages de programmations
-    </h2>
 
-    <div class="skills__info">
-        <div class="skills__data">
-            <div class="skills__blob">
-                <img src="assets/Logo/html-1.svg" alt="bueauimage">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/css-3.svg" alt="bueauimage">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/logo-javascript.svg" alt="bueauimage">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/react-2.svg" alt="bueauimage">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/nodejs-icon.svg" alt="bueauimage">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/php-1.svg" alt="bueauimage">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/express-109.svg" alt="bueauimage">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/mysql-6.svg" alt="bueauimage">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/python-5.svg" alt="bueauimage">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/php-1.svg" alt="bueauimage">
-            </div>  
-            <div class="skills__blob">
-                <img src="assets/Logo/java-4.svg" alt="bueauimage">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/typescript.svg" alt="TypeScript">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/dotnet.svg" alt="C# / .NET">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/vuejs.svg" alt="Vue.js">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/nestjs.svg" alt="NestJS">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/nextjs.svg" alt="Next.js">
+        <h2 class="skills__title1">Data engineering</h2>
+        <div class="skills__info">
+            <div class="skills__data">
+                <div class="skills__blob" tabindex="0" data-name="Python"><img src="assets/Logo/python-5.svg" alt="Python" title="Python"></div>
+                <div class="skills__blob" tabindex="0" data-name="Apache Spark / PySpark"><img src="assets/Logo/apachespark.svg" alt="Apache Spark / PySpark" title="Apache Spark / PySpark"></div>
+                <div class="skills__blob" tabindex="0" data-name="Apache Kafka"><img src="assets/Logo/kafka.svg" alt="Apache Kafka" title="Apache Kafka"></div>
+                <div class="skills__blob" tabindex="0" data-name="Apache Airflow"><img src="assets/Logo/airflow.svg" alt="Apache Airflow" title="Apache Airflow"></div>
+                <div class="skills__blob" tabindex="0" data-name="ClickHouse"><img src="assets/Logo/clickhouse.svg" alt="ClickHouse" title="ClickHouse"></div>
+                <div class="skills__blob" tabindex="0" data-name="FastAPI"><img src="assets/Logo/fastapi.svg" alt="FastAPI" title="FastAPI"></div>
             </div>
         </div>
-    </div>
 
-    <h2 class="skills__title1">
-        Data Engineering &amp; Big Data
-    </h2>
-
-    <div class="skills__info">
-        <div class="skills__data">
-            <div class="skills__blob">
-                <img src="assets/Logo/apachespark.svg" alt="Apache Spark / PySpark">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/kafka.svg" alt="Apache Kafka">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/clickhouse.svg" alt="ClickHouse">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/postgresql.svg" alt="PostgreSQL">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/fastapi.svg" alt="FastAPI">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/streamlit.svg" alt="Streamlit">
-            </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/docker.svg" alt="Docker">
+        <h2 class="skills__title1">Bases de données</h2>
+        <div class="skills__info">
+            <div class="skills__data">
+                <div class="skills__blob" tabindex="0" data-name="PostgreSQL"><img src="assets/Logo/postgresql.svg" alt="PostgreSQL" title="PostgreSQL"></div>
+                <div class="skills__blob" tabindex="0" data-name="SQL Server"><img src="assets/Logo/sqlserver.svg" alt="SQL Server" title="SQL Server"></div>
+                <div class="skills__blob" tabindex="0" data-name="MySQL"><img src="assets/Logo/mysql-6.svg" alt="MySQL" title="MySQL"></div>
             </div>
         </div>
-    </div>
 
-    <h2 class="skills__title1">
-        Langages de scripts
-    </h2>
-
-    <div class="skills__info">
-        <div class="skills__data">
-            <div class="skills__blob">
-                <img src="assets/Logo/bash-1.svg" alt="bueauimage">
+        <h2 class="skills__title1">DevOps &amp; systèmes</h2>
+        <div class="skills__info">
+            <div class="skills__data">
+                <div class="skills__blob" tabindex="0" data-name="Docker"><img src="assets/Logo/docker.svg" alt="Docker" title="Docker"></div>
+                <div class="skills__blob" tabindex="0" data-name="Kubernetes"><img src="assets/Logo/kubernetes.svg" alt="Kubernetes" title="Kubernetes"></div>
+                <div class="skills__blob" tabindex="0" data-name="Git"><img src="assets/Logo/git-icon.svg" alt="Git" title="Git"></div>
+                <div class="skills__blob" tabindex="0" data-name="Linux"><img src="assets/Logo/linux-tux-1.svg" alt="Linux" title="Linux"></div>
             </div>
-            <div class="skills__blob">
-                <img src="assets/Logo/PowerShell.svg" alt="bueauimage">
-            </div>        
-    </div>
-</div>   
-<h2 class="skills__title1">
-    Logiciels bureautiques
-</h2>
+        </div>
 
-<div class="skills__info">
-<div class="skills__data">
-    <div class="skills__blob">
-        <img src="assets/Logo/word-1.svg" alt="bueauimage">
+        </div>
     </div>
-    <div class="skills__blob">
-        <img src="assets/Logo/excel-4.svg" alt="bueauimage">
-    </div>
-    <div class="skills__blob">
-        <img src="assets/Logo/powerpoint-2.svg" alt="bueauimage">
-    </div>
-    <div class="skills__blob">
-        <img src="assets/Logo/adobe-acrobat-reader-icon-2020-.svg" alt="bueauimage">
-    </div>
-</div>
-</div>
+   </section>
 
-<h2 class="skills__title1">
-    Autres logiciels et langages 
-</h2>
-
-<div class="skills__info">
-<div class="skills__data">
-    <div class="skills__blob">
-        <img src="assets/Logo/wireshark.svg" alt="bueauimage">
+   <section class="projects" id="experience">
+        <h1>Mon expérience professionnelle</h1>
+        <p class="section__intro">Ingénieur informatique en alternance chez DATA (Cachan), de septembre 2024 à septembre 2026 :
+            trois projets clients, du développement full-stack aux pipelines de données.</p>
+    <div class="container projects__container">
+        <article data-aos="fade-up" class="project">
+            <h3>Plateforme de gestion conçue de zéro</h3>
+            <p class="project__desc">Conception et développement complet d'une plateforme pour un client (rôles,
+                authentification, contenus), avec un environnement conteneurisé démarrable en une seule commande
+                et une sauvegarde à deux niveaux chiffrée. En complément, un pipeline de reporting qui calcule des
+                indicateurs depuis les données de la plateforme, et un pipeline de logs applicatifs
+                (chargement incrémental dans une table d'audit).</p>
+            <div class="project__stack">
+                <span>PHP</span><span>WordPress</span><span>Python</span><span>Airflow</span><span>MySQL</span><span>Docker</span>
+            </div>
+        </article>
+        <article data-aos="fade-up" class="project">
+            <h3>Application métier en production</h3>
+            <p class="project__desc">Corrections et nouvelles fonctionnalités sur une application en
+                micro-services, sur toute la chaîne : base de données, API C# et interface Vue.js. Conception
+                d'un pipeline d'analytics (SQL Server vers PostgreSQL) calculant des indicateurs de criticité
+                par enseigne sur environ 54 000 commandes, puis d'un pipeline géographique croisant commandes et
+                régions.</p>
+            <div class="project__stack">
+                <span>C#/.NET</span><span>Entity Framework</span><span>Vue.js</span><span>SQL Server</span><span>Airflow</span><span>PostgreSQL</span>
+            </div>
+        </article>
+        <article data-aos="fade-up" class="project">
+            <h3>API d'accès à des rapports BI</h3>
+            <p class="project__desc">Développement d'une API qui donne accès à des rapports QlikSense sans
+                licence individuelle par utilisateur, du prototype en ligne de commande jusqu'à la mise en
+                production, puis correction d'un bug remonté par le client en production.</p>
+            <div class="project__stack">
+                <span>Node.js</span><span>API REST</span><span>QlikSense / Enigma.js</span>
+            </div>
+        </article>
     </div>
-    <div class="skills__blob">
-        <img src="assets/Logo/git-icon.svg" alt="bueauimage">
-    </div>
-    <div class="skills__blob">
-        <img src="assets/Logo/Keycloak_Logo.png" alt="bueauimage">
-    </div>
-    
-    
-</div>
-</div>   
-</section>
+   </section>
 
    <section class="projects" id="projects">
-        <h1>Mes récents projets </h1>
+        <h1>Mes projets de formation</h1>
     <div class="container projects__container">
         <article data-aos="fade-up" class="project">
             <div class="project__image">
                 <img src="./assets/homepedia-banner.svg" alt="Homepedia">
             </div>
             <h3>Homepedia</h3>
-            <p class="project__desc">Plateforme d'aide au logement étudiant : pipeline Spark en architecture 
-                médaillon (Bronze/Silver/Gold), scoring multicritère budget / transport / vie culturelle, 
-                servi via FastAPI et Streamlit.</p>
+            <p class="project__desc">Plateforme d'aide au logement étudiant : pipeline PySpark en architecture
+                médaillon (Bronze/Silver/Gold) sur un cluster distribué (1 master et 2 workers), croisant 5 sources
+                externes pour scorer les communes selon le budget, le transport et la vie culturelle. Publication
+                sur ClickHouse, restitution via FastAPI et Streamlit.</p>
             <div class="project__stack">
                 <span>PySpark</span><span>ClickHouse</span><span>FastAPI</span><span>Streamlit</span><span>Docker</span>
             </div>
             <div class="project__cta">
-                <a href="https://github.com/DATA-Project-HomePedia/T-DAT-902-PAR_7" class="btn sm primary" target="_blank">GitHub</a>
-            </div> 
+                <a href="https://github.com/DATA-Project-HomePedia/T-DAT-902-PAR_7" class="btn sm primary" target="_blank" rel="noopener">GitHub</a>
+            </div>
         </article>
         <article data-aos="fade-up" class="project">
             <div class="project__image">
                 <img src="./assets/cryptoviz-banner.svg" alt="Crypto Viz">
             </div>
             <h3>Crypto Viz</h3>
-            <p class="project__desc">Plateforme d'analytics crypto temps réel : pipeline de streaming Kafka 
-                (extract / transform / load), API FastAPI, base PostgreSQL et dashboard Next.js avec 
-                indicateurs financiers (volatilité, Sharpe, drawdown, corrélation).</p>
+            <p class="project__desc">Plateforme d'analytics crypto en temps réel : pipeline de streaming Kafka
+                (producer/consumer) ingérant 5 cryptomonnaies toutes les 60 secondes, API FastAPI, base PostgreSQL
+                et dashboard Next.js/TypeScript avec indicateurs financiers (volatilité, Sharpe, drawdown,
+                corrélation) et simulateur de portefeuille.</p>
             <div class="project__stack">
                 <span>Kafka</span><span>FastAPI</span><span>PostgreSQL</span><span>Next.js</span><span>Docker</span>
             </div>
             <div class="project__cta">
-                <a href="https://gitlab.com/epitech-t-dat-901/t-dat-901-crypto-viz" class="btn sm primary" target="_blank">GitLab</a>
-            </div> 
+                <a href="https://gitlab.com/epitech-t-dat-901/t-dat-901-crypto-viz" class="btn sm primary" target="_blank" rel="noopener">GitLab</a>
+            </div>
         </article>
-        
     </div>
    </section>
 
    <section data-aos="fade-up" data-aos-delay="200" class="contactme" id="contactme">
-    <h1> Mon profil vous intéresse ? </h1>
+    <h1>Mon profil vous intéresse ?</h1>
+    <p class="section__intro">Écrivez-moi à <a href="mailto:irfannassana@gmail.com">irfannassana@gmail.com</a> ou utilisez le formulaire ci-dessous.</p>
     <div class="container contact__container">
         <form class="message" action="https://formsubmit.co/c3c3e0a6b0bddbc3f447fab02483068f" method="POST">
-            <input type="text" name="Name" placeholder="Full Name">
-            <input type="email" name="Email" placeholder="Email Address">
-            <textarea rows="7" name="Message" placeholder="Message"></textarea>
+            <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="text" name="Name" placeholder="Nom complet" required>
+            <input type="email" name="Email" placeholder="Adresse e-mail" required>
+            <textarea rows="7" name="Message" placeholder="Message" required></textarea>
             <button type="submit" class="btn">Envoyer</button>
         </form>
     </div>
    </section>
+
    <footer data-aos="fade-up" data-aos-delay="200">
     <div class="container footer__container">
         <ul class="footer__menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">A propos de moi</a></li>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos de moi</a></li>
             <li><a href="#skills">Compétences</a></li>
+            <li><a href="#experience">Expérience</a></li>
             <li><a href="#projects">Mes projets</a></li>
-            <li><a href="#contactme">Conctatez-moi</a></li>
+            <li><a href="#contactme">Contactez-moi</a></li>
         </ul>
         <ul class="footer__socials">
-            <li><a href="https://twitter.com/as95_irfann" target="_blank"><i class="uil uil-twitter-alt"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/irfann-assana/" target="_blank"><i class="uil uil-linkedin-alt"></i></a></li>
-            <li><a href="https://github.com/Irfann95/Presentation" target="_blank"><i class="uil uil-github-alt"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/irfann-assana/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="uil uil-linkedin-alt"></i></a></li>
+            <li><a href="https://github.com/Irfann95" target="_blank" rel="noopener" aria-label="GitHub"><i class="uil uil-github-alt"></i></a></li>
+            <li><a href="mailto:irfannassana@gmail.com" aria-label="Envoyer un e-mail"><i class="uil uil-envelope"></i></a></li>
         </ul>
     </div>
     <div class="footer__copyright">
-        <small>2026 Irfann ASSANA &copy; All Rights Reserved. </small>
+        <small>2026 Irfann ASSANA &copy; Tous droits réservés.</small>
     </div>
    </footer>
+
    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
    <script src="typing.js"></script>
    <script src="index.js"></script>
